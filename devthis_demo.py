@@ -1,6 +1,6 @@
 import time
 
-from espeak import espeak
+# from espeak import espeak
 from subprocess import call
 from random import randint
 
@@ -10,7 +10,7 @@ from random import randint
 running_on_pi = False
 
 # Amount of matches being followed
-amount_matches = randint(1, 9)
+amount_matches = randint(1, 5)
 
 # Declare empty array for followed matches, to be filled later on
 followed_matches = []
@@ -47,46 +47,11 @@ match_events = {
 		"Both teams have yet to score, it is now half-time with a score of 0 to 0"
 	],
 	4: [
-		"The match Feyenoord - AZ is starting soon",
-		"Feyenoord - AZ has started",
-		"1 to 0 for Feyenoord",
-		"Good chance, but off-side from Dirk Kuyt",
-		"AZ shot against the post"
-	],
-	5: [
-		"The match Feyenoord - AZ is starting soon",
-		"Feyenoord - AZ has started",
-		"1 to 0 for Feyenoord",
-		"Good chance, but off-side from Dirk Kuyt",
-		"AZ shot against the post"
-	],
-	6: [
-		"The match Feyenoord - AZ is starting soon",
-		"Feyenoord - AZ has started",
-		"1 to 0 for Feyenoord",
-		"Good chance, but off-side from Dirk Kuyt",
-		"AZ shot against the post"
-	],
-	7: [
-		"The match Feyenoord - AZ is starting soon",
-		"Feyenoord - AZ has started",
-		"1 to 0 for Feyenoord",
-		"Good chance, but off-side from Dirk Kuyt",
-		"AZ shot against the post"
-	],
-	8: [
-		"The match Feyenoord - AZ is starting soon",
-		"Feyenoord - AZ has started",
-		"1 to 0 for Feyenoord",
-		"Good chance, but off-side from Dirk Kuyt",
-		"AZ shot against the post"
-	],
-	9: [
-		"The match Feyenoord - AZ is starting soon",
-		"Feyenoord - AZ has started",
-		"1 to 0 for Feyenoord",
-		"Good chance, but off-side from Dirk Kuyt",
-		"AZ shot against the post"
+		"Manchester United against Liverpool will start shortly",
+		"Manchester United has kicked off the match against Liverpool",
+		"Rooney is not playing today, as he is injured from last match",
+		"Goal! Rashford scores with a free kick to make it 1 to 0 for Manchester",
+		"Goal! Only 2 minutes since Rashford scored, Depay scores to make it 2 to 0"
 	]
 }
 
@@ -110,8 +75,8 @@ say('I am following {} matches.'.format(amount_matches))
 # What matches are being followed are decided randomly
 for i in range(amount_matches):
 
-	# Get a random number between 0 and 9
-	new_match = randint(0, 9)
+	# Get a random number between 0 and 4
+	new_match = randint(0, 4)
 
 	# Is the random number (match id) not yet followed?
 	if new_match not in followed_matches:
