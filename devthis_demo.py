@@ -1,6 +1,6 @@
 import time
 
-# from espeak import espeak
+from espeak import espeak
 from subprocess import call
 from random import randint
 
